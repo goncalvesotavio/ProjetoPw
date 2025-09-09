@@ -1,0 +1,12 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "nome": "Notebook",
+            "preco": 3500.00,
+            "ativo": true,
+            "data_criacao": "2025-01-01",
+            "data_atualizacao": "2025-01-01"
+        }
+    ]
+}
