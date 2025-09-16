@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AppNavbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import Products from "./pages/Products";
-import ProductForm from "./pages/ProductForm";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import AppNavbar from "./components/Navbar.jsx"
+import Sidebar from "./components/Sidebar.jsx"
+import Dashboard from "./pages/Dashboard.jsx"
+import Products from "./pages/Products.jsx"
+import ProductForm from "./components/ProductForm.jsx"
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         </div>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

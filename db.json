@@ -1,12 +1,22 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "nome": "Notebook",
-            "preco": 3500.00,
-            "ativo": true,
-            "data_criacao": "2025-01-01",
-            "data_atualizacao": "2025-01-01"
-        }
-    ]
+  "products": [
+    {
+      "id": "002",
+      "nome": "Otávio Henrique Nunes Gonçalves",
+      "preco": "11111",
+      "ativo": true,
+      "data_criação": "2025-09-16",
+      "data_atualizacao": "2025-09-16",
+      "data_criacao": "2025-09-16"
+    },
+    {
+      "id": "003",
+      "nome": "otavio",
+      "preco": "141",
+      "ativo": true,
+      "data_criação": "2025-09-16",
+      "data_atualizacao": "2025-09-16",
+      "data_criacao": "2025-09-16"
+    }
+  ]
 }

@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react";
-import api from "../services/api";
-import $ from "jquery";
-import "datatables.net";
-import { Button } from "react-bootstrap";
-import { FaEdit, FaTrash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import api from "../services/api"
+import $ from "jquery"
+import "datatables.net"
+import { Button } from "react-bootstrap"
+import { FaEdit, FaTrash } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
 
 export default function Products() {
-    const [products, setProducts] = useState([]);
-    const navigate = UseNavigate();
+    const [products, setProducts] = useState([])
+    const navigate = useNavigate()
 
     const loadProducts = async () => {
-        const res = await api.get("/products");
-        setProducts(res.data);
-        $("#productsTable").DataTable();
-    };
+        const res = await api.get("/products")
+        setProducts(res.data)
+        $("#productsTable").DataTable()
+    }
 
     useEffect(() => {
-        loadProducts();
-    }, []);
+        loadProducts()
+    }, [])
 
     const deleteProduct = async (id) => {
         if (window.confirm("Deseja deletar este produto?")) {
-            await api.delete(`/products/${id}`);
-            loadProducts();
+            await api.delete(`/products/${id}`)
+            loadProducts()
         }
-    };
+    }
 
     return (
         <div className="container mt-4">
@@ -33,6 +33,7 @@ export default function Products() {
             <Button className="mb-3" onClick={() => navigate("/products/new")}>
                 Novo Produto
             </Button>
+
             <table id="productsTable" className="table table-striped">
                 <thead>
                     <tr>
@@ -50,7 +51,7 @@ export default function Products() {
                         <tr key={p.id}>
                             <td>{p.id}</td>
                             <td>{p.nome}</td>
-                            <td>R$ {p.preco.toFixed(2)}</td>
+                            <td>R$ {Number(p.preco).toFixed(2)}</td>
                             <td>{p.ativo ? "Sim" : "Não"}</td>
                             <td>{p.data_criacao}</td>
                             <td>{p.data_atualizacao}</td>
@@ -69,5 +70,5 @@ export default function Products() {
                 </tbody>
             </table>
         </div>
-    );
+    )
 }
